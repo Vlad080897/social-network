@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/social-network/static/css/main.af61820e.chunk.css",
+    "main.js": "/social-network/static/js/main.1be2535c.chunk.js",
+    "main.js.map": "/social-network/static/js/main.1be2535c.chunk.js.map",
+    "runtime-main.js": "/social-network/static/js/runtime-main.a8e0ff30.js",
+    "runtime-main.js.map": "/social-network/static/js/runtime-main.a8e0ff30.js.map",
+    "static/js/2.6a940211.chunk.js": "/social-network/static/js/2.6a940211.chunk.js",
+    "static/js/2.6a940211.chunk.js.map": "/social-network/static/js/2.6a940211.chunk.js.map",
+    "static/js/3.11f51a5d.chunk.js": "/social-network/static/js/3.11f51a5d.chunk.js",
+    "static/js/3.11f51a5d.chunk.js.map": "/social-network/static/js/3.11f51a5d.chunk.js.map",
+    "index.html": "/social-network/index.html",
+    "static/css/main.af61820e.chunk.css.map": "/social-network/static/css/main.af61820e.chunk.css.map",
+    "static/js/2.6a940211.chunk.js.LICENSE.txt": "/social-network/static/js/2.6a940211.chunk.js.LICENSE.txt",
+    "static/media/bg_photo.css": "/social-network/static/media/Raster.1753712b.jpg",
+    "static/media/__Iphone-spinner-1.4c0dabf6.gif": "/social-network/static/media/__Iphone-spinner-1.4c0dabf6.gif",
+    "static/media/catvacation.efd24026.jpg": "/social-network/static/media/catvacation.efd24026.jpg",
+    "static/media/friends.805bbb13.png": "/social-network/static/media/friends.805bbb13.png",
+    "static/media/loading.b767aab4.svg": "/social-network/static/media/loading.b767aab4.svg",
+    "static/media/news_photo.4332ecf7.jpg": "/social-network/static/media/news_photo.4332ecf7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a8e0ff30.js",
+    "static/js/2.6a940211.chunk.js",
+    "static/css/main.af61820e.chunk.css",
+    "static/js/main.1be2535c.chunk.js"
+  ]
+}
