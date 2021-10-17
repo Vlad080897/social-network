@@ -1,0 +1,23 @@
+.my_post {
+    width: 100%;
+    resize: none;
+}
+
+.my_posts {
+    margin-top: 1rem;
+    display: flex;
+}
+
+button {
+    background-color: rgb(74, 193, 240);
+    width: 162px;
+    height: 36px;
+    align-self: flex-start;
+    color: white;
+}
+
+.post_photo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}

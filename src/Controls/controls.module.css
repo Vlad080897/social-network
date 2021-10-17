@@ -1,0 +1,8 @@
+.required_field {
+    
+    border: 2px solid red;
+}
+
+.error_massage {
+    color: red;
+}

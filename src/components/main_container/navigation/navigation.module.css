@@ -1,0 +1,26 @@
+.nav {
+    background-color: rgb(74, 193, 240);
+    margin-right: 10px;
+}
+
+ul a.active {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+ul li {
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.nav ul li:hover {
+    border-bottom: 1px solid white;
+    color: white;
+    transition: 0.3s all;
+}

@@ -1,0 +1,21 @@
+.context {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+
+.profile_info {
+    flex-grow: 2;
+}
+
+.status_description {
+    flex-basis: 100%;
+}
+
+.status {
+    flex-basis: 100%;
+}

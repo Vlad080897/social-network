@@ -1,0 +1,9 @@
+.massages {
+    width: 100%;
+}
+
+.massages .text {
+    flex-grow: 3;
+    text-align: center;
+}
+

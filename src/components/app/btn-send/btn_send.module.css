@@ -1,0 +1,11 @@
+.btn-send {
+    background-color: rgb(74, 193, 240);
+    width: 162px;
+    height: 36px;
+    align-self: flex-end;
+    color: white;
+}
+
+.btn-send[type='button'] {
+    margin-top: 1rem;
+}
