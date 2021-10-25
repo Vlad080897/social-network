@@ -1,5 +1,5 @@
 import React from 'react'
-import './app.css'
+import s from './app.css'
 import Container from '../main_container/container'
 import HeaderContainer from './header/headerContainer'
 import { withRouter } from 'react-router-dom'
@@ -19,7 +19,7 @@ class App extends React.Component {
     render() {
         
         if (!this.props.initialized) {
-            return <img src={preloader} alt='error' />
+            return <img className={s.preloader} src={preloader} alt='error' />
         }
 
         return (

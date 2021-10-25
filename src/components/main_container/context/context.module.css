@@ -19,3 +19,8 @@
 .status {
     flex-basis: 100%;
 }
+
+.btn_new_photo {
+    position: relative;
+    top: -166px;
+}

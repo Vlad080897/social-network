@@ -1,19 +1,40 @@
-import React from "react";
-import BgPhoto from "./bg-photo/BgPhoto";
+import { React, useState } from "react";
 import s from './context.module.css'
-import MyPosts2 from "./posts/myPosts2";
 import MyPostsContainer2 from "./posts/myPostsContainer2";
-import ProfileInfo from "./profile-info/profileInfo";
-import ProfileInformation from "./profile-info/profileInformation";
+import ProfileInfoEditReduxForm from "./profile-info/ProfileInfoEditForm";
+import ProfileInformation from "./profile-info/profileInfo";
+import ProfilePhoto from "./profile-info/profilePhoto"
+
 
 
 const Context2 = (props) => {
+
+    const [editMode, changeEditMode] = useState(false)
+
+    const toggleEditMode = () => {
+        changeEditMode(!editMode)
+
+    }
+
+    const onSubmit = (formData) => {
+        props.saveProfileInfo(formData);
+    }
+
+
     return (
         <>
             <div className={s.context}>
-                <ProfileInformation {...props} />
+                <ProfilePhoto {...props} />
+                {editMode ?
+                    <ProfileInfoEditReduxForm initialValues={props.state} {...props} isOwner={props.isOwner}
+                        setNewPhoto={props.setNewPhoto} toggleEditMode={toggleEditMode} onSubmit={onSubmit} />
+                    :
+                    <ProfileInformation {...props} isOwner={props.isOwner}
+                        setNewPhoto={props.setNewPhoto} toggleEditMode={toggleEditMode} />}
+
                 <MyPostsContainer2 />
             </div>
+
 
         </>
     )

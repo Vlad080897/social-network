@@ -1,52 +1,62 @@
 import React from "react";
 import { connect } from "react-redux";
 import Context2 from "./context2";
-import { getCurrentUserProfile } from "../../../redux/profilePageReducer2";
 import { compose } from "redux";
 import { withRouter } from "react-router";
 import { withAuthRedirect2 } from "../../../hoc/redirectComponent2";
-import { withCurrentUserId } from "../../../hoc/currentUserIdComponent";
-import { getStatus } from "../../../redux/profilePageReducer2";
+import { getStatus, setNewPhoto, saveProfileInfo, getCurrentUserProfile } from "../../../redux/profilePageReducer2";
+
 
 class ContextContainer2 extends React.Component {
+    setNewPhoto = (e) => {
+        this.props.setNewPhoto(e.currentTarget.files[0])
+    }
 
-    componentDidMount() {
-        debugger
+    refreshProfile() {
         let userID = this.props.match.params.userID
         if (!userID) {
             userID = this.props.idOfCurrentUser;
         }
-        this.props.getCurrentUserProfile(userID)
+        this.props.getCurrentUserProfile(userID);
         this.props.getStatus(userID)
     }
 
+    componentDidMount() {
+        this.refreshProfile()
+    }
+
     componentDidUpdate(preProps) {
-        debugger
         if (preProps.match.params.userID !== this.props.match.params.userID) {
-            let userID = this.props.match.params.userID
-            if (!userID) {
-                userID = this.props.idOfCurrentUser;
-            }
-            this.props.getCurrentUserProfile(userID);
-            this.props.getStatus(userID)
+            this.refreshProfile()
+        }
+
+    }
+
+    shouldComponentUpdate(nextProps) {
+        if (this.props !== nextProps) {
+            return true
         }
 
     }
     render() {
-        return <Context2 {...this.props} />
+        return <Context2 {...this.props}
+            isOwner={!this.props.match.params.userID}
+            setNewPhoto={this.setNewPhoto}
+            saveProfileInfo={this.props.saveProfileInfo}
+        />
     }
 }
 
 const mapStateToProps = (state) => {
-    debugger
     return {
         state: state.profilePage2.profile,
+        btnDisable: state.profilePage2.btnDisable,
         idOfCurrentUser: state.authReducer.id
     }
 }
 
 export default compose(
-    connect(mapStateToProps, { getCurrentUserProfile, getStatus }),
+    connect(mapStateToProps, { getCurrentUserProfile, getStatus, setNewPhoto, saveProfileInfo }),
     withRouter,
     withAuthRedirect2,
 )(ContextContainer2)

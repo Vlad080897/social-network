@@ -6,9 +6,9 @@ import FriendsElements from './friendsElements/friendsElements'
 
 const Friends = (props) => {
     debugger
-    let arrFriends = Object.values(props.friends.friendsPage)
-    const friendsElements = arrFriends.map(el => <FriendsElements name={el.name} city={el.city} age={el.age} />)
-    
+    let friendsElements = Object.values(props.friends.friendsPage).map(el => 
+    <FriendsElements name={el.name} city={el.city} age={el.age} />)
+
 
     return (
         <div className={s.friends_container}>

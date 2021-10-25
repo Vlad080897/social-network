@@ -1,5 +1,10 @@
-.my_post {
+.my_post_container {
     width: 100%;
+}
+
+.my_post {
+    width: 50%;
+    height: 70px;
     resize: none;
 }
 

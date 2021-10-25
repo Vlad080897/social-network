@@ -1,0 +1,78 @@
+.container_profileInfo {
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 60%;
+}
+
+.container_profileInfo>div {
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+}
+
+.name_of_user {
+    font-weight: bold;
+}
+
+.user_main_photo {
+    width: 300px;
+    height: 300px;
+}
+
+.social_media_contacts {
+    padding-left: 10px;
+}
+
+.social_media_contacts_error {
+    border: 1px solid red;
+    color: red;
+}
+
+.userPhoto_container {
+    position: relative;
+
+}
+
+.userPhoto_container:hover .btn_new_photo img {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.55s;
+
+}
+
+.btn_new_photo {
+    position: absolute;
+    top: 10px;
+
+}
+
+.btn_new_photo div {
+    position: relative;
+}
+
+
+.btn_new_photo div image,
+.btn_new_photo div input {
+    position: absolute;
+
+}
+
+
+
+.btn_new_photo div input {
+    right: 0px;
+}
+
+.btn_new_photo input {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+
+}
+
+.btn_new_photo img {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: 0.55s;
+}

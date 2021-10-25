@@ -1,6 +1,7 @@
-.required_field {
-    
+.required_field input,
+.required_field textarea {
     border: 2px solid red;
+    outline: none;
 }
 
 .error_massage {

@@ -4,13 +4,12 @@ import { Input } from '../../../Controls/controls'
 import { maxLength, minLength, requiredField } from '../../../utilits/validators/Validators'
 import { connect } from 'react-redux'
 import { loginThunk } from '../../../redux/authReducer'
-import { Redirect } from 'react-router'
 import { compose } from 'redux'
 import { withAuthRedirectToProfile } from '../../../hoc/redirectComponent'
 
 const Login = (props) => {
     const onSubmit = (formData) => {
-        props.loginThunk(formData.email, formData.password, formData.rememberMe)
+        props.loginThunk(formData.email, formData.password, formData.rememberMe, formData.captcha)
     }
     return (
         <LoginReduxedForm onSubmit={onSubmit} captchaUrl={props.captchaUrl} />
@@ -35,20 +34,19 @@ const LoginForm = (props) => {
                 <Field component={Input} type='checkbox' name='rememberMe' />
             </div>
             <div>
-                {props.captchaUrl ?
+                {props.captchaUrl &&
                     <div>
                         <div>Введите Капчу</div>
                         <img src={props.captchaUrl} />
-                    </div>
-                    :
-                    ''}
+                        <Field placeholder='captcha symbols' component={Input} type='text' name='captcha' validate={[requiredField]} />
+                    </div>}
             </div>
-            
+
             <div>
                 {props.error}
             </div>
             <div>
-                <button >Log in</button>
+                <button>Log in</button>
             </div>
 
         </form>

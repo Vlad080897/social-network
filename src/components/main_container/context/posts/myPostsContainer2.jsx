@@ -24,11 +24,11 @@ const MyPostsContainer2 = (props) => {
     })
 
     return (
-        <>
+        <div className={s.my_post_container}>
             <MyPosts2 addPost={addPost} />
             <div>{allPosts}</div>
 
-        </>
+        </div>
     )
 }
 

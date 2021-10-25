@@ -8,7 +8,7 @@ const MyPostsForm2 = (props) => {
         props.addPost(values.postText);
     }
     return (
-        <ReduxFormForPosts onSubmit={getValues} className={s.my_post} />
+        <ReduxFormForPosts onSubmit={getValues} />
     )
 }
 
@@ -16,14 +16,15 @@ const FormForPosts = (props) => {
     return (
         <>
 
-            <form onSubmit={props.handleSubmit} className={s.my_post}>
+            <form onSubmit={props.handleSubmit} >
                 <span>My Posts</span>
-                <Field component={Textarea} type='text' name='postText'  placeholder='Write your post here...' />
+                <Field component={Textarea} type='text' name='postText' placeholder='Write your post here...' className={s.my_post } />
                 <button>Add Post</button>
             </form>
         </>
     )
 }
+
 
 const ReduxFormForPosts = reduxForm({
     form: 'posts'

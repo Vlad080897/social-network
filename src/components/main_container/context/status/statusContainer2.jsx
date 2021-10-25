@@ -3,8 +3,7 @@ import Status2 from "./status2";
 import { connect } from "react-redux";
 import { getStatus, setStatus2 } from "../../../../redux/profilePageReducer2";
 import { compose } from "redux";
-import { withRouter } from "react-router";
-import { withCurrentUserId } from "../../../../hoc/currentUserIdComponent";
+
 
 const StatusContainer2 = ({ statusState, getStatus, setStatus2, ...props }) => {
 
@@ -14,7 +13,7 @@ const StatusContainer2 = ({ statusState, getStatus, setStatus2, ...props }) => {
     useEffect(() => {
         getStatus(props.match.params.userID);
         statusChanged(statusState);
-    }, [])
+    }, [statusState])
 
     const onEditMode = () => {
         changeEditMode(true);
@@ -42,7 +41,6 @@ const StatusContainer2 = ({ statusState, getStatus, setStatus2, ...props }) => {
 }
 
 const mapStateToProps = (state) => {
-    debugger
     return {
         statusState: state.profilePage2.status,
         profile: state.profilePage2.profile

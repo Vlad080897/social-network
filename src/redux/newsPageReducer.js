@@ -26,7 +26,6 @@ const initialState = {
 }
 
 const newsPageReducer = (state = initialState, action) => {
-    
     switch (action.type) {
         case ADD_NEWS_POST: {
             let copyState = { ...state };
