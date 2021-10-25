@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/main_container/friends/friends.module.css"],"names":[],"mappings":"AAAA,kCACI,oBAAa,CAAb,YACJ,CAEA,sCACI,UAAW,CACX,WACJ","file":"4.e924124a.chunk.css","sourcesContent":[".friends_container {\r\n    display: flex;\r\n}\r\n\r\n.friends_container img {\r\n    width: 50px;\r\n    height: 50px;\r\n}"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/main_container/settings/setting.module.css"],"names":[],"mappings":"AAAA,uCACI,gBACJ,CAEA,sCACI,iBACJ","file":"6.f6295a17.chunk.css","sourcesContent":[".container_settings > div {\r\n    padding: 10px 0 0 0;\r\n}\r\n\r\n.social_media_contacts {\r\n    padding-left: 10px;\r\n}"]}
