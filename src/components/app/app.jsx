@@ -7,19 +7,20 @@ import { connect } from 'react-redux'
 import { initializedThunk } from '../../redux/appReducer'
 import preloader from './../img/__Iphone-spinner-1.gif'
 import { compose } from 'redux'
+import Loader from './loader/loader'
 
 
 class App extends React.Component {
 
     componentDidMount() {
-        
+
         this.props.initializedThunk()
     }
 
     render() {
-        
+
         if (!this.props.initialized) {
-            return <img className={s.preloader} src={preloader} alt='error' />
+            return <Loader isLoading={true} />
         }
 
         return (
