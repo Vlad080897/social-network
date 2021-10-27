@@ -13,9 +13,29 @@ export const getMassages = (state) => {
 }
 
 export const getUsersMassages = (state) => {
-    debugger
     return state.massagesPage.massagesPage.dialogs
 }
+
+export const getAuthReducerState = (state) => {
+    return state.authReducer
+}
+
+export const getInitializedData = (state) => {
+    return state.appReducer.isInitialized
+}
+
+export const getProfilePageInfo = (state) => {
+    return state.profilePage2.profile
+}
+
+export const getButtonCondition = (state) => {
+    return state.profilePage2.btnDisable
+}
+
+export const getIdOfCurrentUser = (state) => {
+    return state.authReducer.id
+}
+
 
 
 

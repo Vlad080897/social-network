@@ -36,9 +36,9 @@ const Container = () => {
                     render={withSuspense(DialogsContainer)} ></Route>
                 <Route path='/news'
                     render={withSuspense(NewsContainer)}></Route>
-                <Route path='/music'
+                {/* <Route path='/music'
                     render={withSuspense(Music)}></Route>
-                <Route path='/settings' render={withSuspense(SettingsContainer)}></Route>
+                <Route path='/settings' render={withSuspense(SettingsContainer)}></Route> */}
                 {/* <Route path='/friends'
                     render={withSuspense(Friends)}></Route> */}
                 <Route path='/users'

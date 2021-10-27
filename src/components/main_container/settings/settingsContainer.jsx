@@ -7,8 +7,7 @@ class SettingsContainer extends React.Component {
 
 
     render() {
-        // return <Settings {...this.props} />
-        return <div></div>
+        return <Settings {...this.props} />
     }
 }
 

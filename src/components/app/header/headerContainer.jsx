@@ -5,6 +5,7 @@ import Header from './header'
 import { setUserData } from '../../../redux/authReducer'
 import { authThunk, logoutThunk } from '../../../redux/authReducer'
 import { compose } from 'redux'
+import { getAuthReducerState } from '../../../redux/selectors'
 
 class HeaderContainer extends React.Component {
 
@@ -20,7 +21,7 @@ class HeaderContainer extends React.Component {
 const mapStateToProps = (state) => {
 
     return {
-        state: state.authReducer
+        state: getAuthReducerState(state),
     }
 }
 

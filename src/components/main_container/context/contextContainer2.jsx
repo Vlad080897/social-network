@@ -5,6 +5,7 @@ import { compose } from "redux";
 import { withRouter } from "react-router";
 import { withAuthRedirect2 } from "../../../hoc/redirectComponent2";
 import { getStatus, setNewPhoto, saveProfileInfo, getCurrentUserProfile } from "../../../redux/profilePageReducer2";
+import { getProfilePageInfo, getButtonCondition, getIdOfCurrentUser } from "../../../redux/selectors";
 
 
 class ContextContainer2 extends React.Component {
@@ -49,9 +50,9 @@ class ContextContainer2 extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        state: state.profilePage2.profile,
-        btnDisable: state.profilePage2.btnDisable,
-        idOfCurrentUser: state.authReducer.id
+        state: getProfilePageInfo(state),
+        btnDisable: getButtonCondition(state),
+        idOfCurrentUser: getIdOfCurrentUser(state)
     }
 }
 

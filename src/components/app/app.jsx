@@ -8,6 +8,7 @@ import { initializedThunk } from '../../redux/appReducer'
 import preloader from './../img/__Iphone-spinner-1.gif'
 import { compose } from 'redux'
 import Loader from './loader/loader'
+import { getInitializedData } from '../../redux/selectors'
 
 
 class App extends React.Component {
@@ -45,7 +46,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        initialized: state.appReducer.isInitialized
+        initialized: getInitializedData(state),
     }
 }
 
