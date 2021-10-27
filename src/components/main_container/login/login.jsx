@@ -47,6 +47,8 @@ const LoginForm = (props) => {
             </div>
             <div>
                 <button>Log in</button>
+                <div>Логин : vvitkovskij4@gmail.com</div>
+                <div>Пароль: fgHR78</div>
             </div>
 
         </form>
