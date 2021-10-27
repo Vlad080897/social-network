@@ -11,7 +11,6 @@ const Header = (props) => {
             <div>{props.state.login === null || props.state.login === undefined ? <NavLink to={'/login'} >Login</NavLink>
                 :
                 <div>
-                    {props.state.login} - 
                     <button onClick={props.logoutThunk}>Logout</button>
                 </div>
             }</div>

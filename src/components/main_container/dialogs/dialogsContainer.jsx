@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Dialogs from './dialogs'
-import { dialogsThunk, addMassageThunk } from '../../../redux/massagesPageReducer'
-import { Redirect } from 'react-router-dom'
+import { addMassageThunk } from '../../../redux/massagesPageReducer'
 import { withAuthRedirect2 } from '../../../hoc/redirectComponent2'
 import { compose } from 'redux'
 import withLazyComponent from '../../../hoc/lazyComponent'
+import { getMassages, getUsersMassages } from '../../../redux/selectors'
+
 
 class DialogsContainer extends React.Component {
     componentDidMount() {
@@ -15,7 +16,8 @@ class DialogsContainer extends React.Component {
     render() {
 
         return (
-            <Dialogs state={this.props.state}
+            <Dialogs massages={this.props.massages}
+                users={this.props.users}
                 dialogsThunk={this.props.dialogsThunk}
                 addMassageThunk={this.props.addMassageThunk}
             />
@@ -25,15 +27,15 @@ class DialogsContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-
     return {
-        state: state.massagesPage.massagesPage,
+        massages: getMassages(state),
+        users: getUsersMassages(state),
 
     }
 }
 
 export default compose(
     withLazyComponent,
-    connect(mapStateToProps, { dialogsThunk, addMassageThunk }),
+    connect(mapStateToProps, { addMassageThunk }),
     withAuthRedirect2,
 )(DialogsContainer)

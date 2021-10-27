@@ -6,7 +6,6 @@ import { maxLength, requiredField } from '../../../utilits/validators/Validators
 const DialogsForm = (props) => {
     
     const addNewMassage = (values) => {
-        debugger
         props.addMassageThunk(values.text);
     }
 

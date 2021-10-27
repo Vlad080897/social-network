@@ -16,7 +16,7 @@ const SettingsContainer = React.lazy(() => import('./settings/settingsContainer'
 const Friends = React.lazy(() => import('../main_container/friends/friends'));
 
 
-const Container = (props) => {
+const Container = () => {
 
     return (
 
