@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/main_container/dialogs/dialogs.module.css"],"names":[],"mappings":"AAAA,yBACI,UACJ,CAEA,8CACI,mBAAY,CAAZ,WAAY,CACZ,iBACJ","file":"5.d7f97aa0.chunk.css","sourcesContent":[".massages {\r\n    width: 100%;\r\n}\r\n\r\n.massages .text {\r\n    flex-grow: 3;\r\n    text-align: center;\r\n}\r\n\r\n"]}
