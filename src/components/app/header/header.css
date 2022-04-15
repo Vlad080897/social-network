@@ -1,10 +1,6 @@
-header {
-    background-color: rgb(74, 193, 240);
-    display: flex;
-    justify-content: space-between;
-}
+
 
 header img {
     width: 64px;
     height: 64px;
-}
+} 

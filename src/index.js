@@ -1,37 +1,19 @@
+import "antd/dist/antd.css";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/app/app';
-import store from './redux/redux-store';
 import { Provider } from 'react-redux';
-import { HashRouter } from 'react-router-dom'
-
-
-
-
-
+import { HashRouter } from 'react-router-dom';
+import App from './components/app/app';
+import './index.css';
+import store from './redux/redux-store';
 
 ReactDOM.render(
-    <Provider store={store}>
-        <HashRouter >
-            <App store={store.getState()} dispatch={store.dispatch.bind(store)}></App>
-        </HashRouter>
-    </Provider>,
-    document.querySelector('#root'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <React.StrictMode>
+        <Provider store={store}>
+            <HashRouter>
+                <App />
+            </HashRouter>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root'),
+);

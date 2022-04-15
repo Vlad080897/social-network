@@ -7,3 +7,9 @@
 .error_massage {
     color: red;
 }
+
+.my_post {
+    width: 50%;
+    height: 70px;
+    resize: none;
+}
